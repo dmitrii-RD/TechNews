@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Топ-5 смартфонов 2025 года</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header .logo {
+            color: #fff;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .phone-item {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .phone-item:hover {
+            transform: scale(1.05);
+        }
+
+        .phone-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .phone-item p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .phone-item h3 {
+            color: #333;
+            font-size: 24px;
+        }
+
+        .popup-info {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 80%;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .popup-info h3 {
+            font-size: 28px;
+        }
+
+        .popup-info p {
+            font-size: 18px;
+        }
+
+        .popup-close {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .popup-close:hover {
+            background-color: #d32f2f;
+        }
+
+        .ad-banner {
+            background-color: #f9a825;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+
+        .ad-banner img {
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 40px;
+            font-size: 18px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .phone-item-wrapper {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .phone-item {
+            width: 300px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Анимация фона */
+        .animate-background {
+            animation: backgroundAnimation 10s infinite;
+        }
+
+        @keyframes backgroundAnimation {
+            0% { background-color: #ffffff; }
+            50% { background-color: #e1f5fe; }
+            100% { background-color: #ffffff; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">📡 TechNews</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="article1.html">ИИ</a></li>
+                <li><a href="article2.html">Смартфоны</a></li>
+                <li><a href="article3.html">Технологии</a></li>
+                <li><a href="article4.html">Гаджеты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Топ-5 смартфонов 2025 года</h2>
+        <p>2025 год обещает стать годом, когда на рынке смартфонов появятся новые флагманы, обладающие невероятной мощностью и функциями. Мы собрали топ-5 лучших смартфонов этого года, которые стоит ожидать в продаже.</p>
+
+        <div class="phone-item-wrapper">
+            <div class="phone-item animate-background" onclick="showInfo('iphone16')">
+                <h3>1. iPhone 16 Pro Max</h3>
+                <img src="images/iphone.jpg" alt="iPhone 16 Pro Max">
+                <p><strong>Особенности:</strong> Экран 6.7 дюйма, процессор A17 Bionic, 48 МП камера, 5000 мАч батарея, поддержка 5G.</p>
+            </div>
+
+            <div class="phone-item animate-background" onclick="showInfo('samsung')">
+                <h3>2. Samsung Galaxy S25 Ultra</h3>
+                <img src="images/samsung.jpg" alt="Samsung Galaxy S25 Ultra">
+                <p><strong>Особенности:</strong> Экран 6.8 дюймов, процессор Exynos 2200, 200 МП камера, батарея 5000 мАч.</p>
+            </div>
+
+            <div class="phone-item animate-background" onclick="showInfo('google-pixel')">
+                <h3>3. Google Pixel 9 Pro</h3>
+                <img src="images/google.jpg" alt="Google Pixel 9 Pro">
+                <p><strong>Особенности:</strong> Экран 6.5 дюйма OLED, процессор Google Tensor 3, 50 МП камера, батарея 4600 мАч.</p>
+            </div>
+
+            <div class="phone-item animate-background" onclick="showInfo('oneplus')">
+                <h3>4. OnePlus 12</h3>
+                <img src="images/oneplus.jpg" alt="OnePlus 12">
+                <p><strong>Особенности:</strong> Экран 6.7 дюйма Fluid AMOLED, процессор Snapdragon 8 Gen 3, 108 МП камера, батарея 5000 мАч.</p>
+            </div>
+
+            <div class="phone-item animate-background" onclick="showInfo('xiaomi')">
+                <h3>5. Xiaomi Mi 15 Pro</h3>
+                <img src="images/xiaomi.jpg
+                " alt="Xiaomi Mi 15 Pro">
+                <p><strong>Особенности:</strong> Экран 6.7 дюйма AMOLED, процессор Snapdragon 8 Gen 3, 108 МП камера, батарея 4500 мАч.</p>
+            </div>
+        </div>
+
+        <div class="popup-info" id="iphone16">
+            <h3>iPhone 16 Pro Max</h3>
+            <p>iPhone 16 Pro Max — это совершенно новый флагман, оснащённый передовыми технологиями. Процессор A17 Bionic, улучшенная камера с возможностью записи 8K видео, и мощная батарея позволяют получить максимальную производительность.</p>
+            <button class="popup-close" onclick="closePopup()">Закрыть</button>
+        </div>
+
+        <div class="popup-info" id="samsung">
+            <h3>Samsung Galaxy S25 Ultra</h3>
+            <p>Samsung Galaxy S25 Ultra оснащён выдающейся камерой с разрешением 200 МП и мощным процессором Exynos 2200. Его экран 6.8 дюйма Ultra AMOLED станет идеальным для мультимедийных развлечений.</p>
+            <button class="popup-close" onclick="closePopup()">Закрыть</button>
+        </div>
+
+        <div class="popup-info" id="google-pixel">
+            <h3>Google Pixel 9 Pro</h3>
+            <p>Google Pixel 9 Pro — это высший стандарт в области камер. Его процессор Google Tensor 3 в сочетании с 50 МП камерой и OLED дисплеем создают идеальный смартфон для любителей фотографии.</p>
+            <button class="popup-close" onclick="closePopup()">Закрыть</button>
+        </div>
+
+        <div class="popup-info" id="oneplus">
+            <h3>OnePlus 12</h3>
+            <p>OnePlus 12 предлагает высококлассную производительность, улучшенную камеру и экран Fluid AMOLED с частотой обновления 120 Гц. Это идеальный выбор для геймеров.</p>
+            <button class="popup-close" onclick="closePopup()">Закрыть</button>
+        </div>
+
+        <div class="popup-info" id="xiaomi">
+            <h3>Xiaomi Mi 15 Pro</h3>
+            <p>Xiaomi Mi 15 Pro имеет 108 МП камеру и процессор Snapdragon 8 Gen 3. Смартфон идеально подходит для тех, кто ищет баланс между производительностью и ценой.</p>
+            <button class="popup-close" onclick="closePopup()">Закрыть</button>
+        </div>
+
+        <div class="ad-banner">
+            <p>🔥 Реклама</p>
+            <a href="iphone-info.html"><img src="ad-placeholder.jpg" alt="Рекламный баннер"></a>
+        </div>
+
+        <a href="index.html" class="back-link">← Назад</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TechNews</p>
+    </footer>
+
+    <script>
+        function showInfo(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function closePopup() {
+            var popups = document.querySelectorAll('.popup-info');
+            popups.forEach(function(popup) {
+                popup.style.display = 'none';
+            });
+        }
+    </script>
+
+</body>
+</html>
+
+
